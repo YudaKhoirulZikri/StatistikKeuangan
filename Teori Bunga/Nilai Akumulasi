@@ -1,0 +1,26 @@
+# StatistikaKeuangan
+Sintaks Tentang Statistika Keuangan
+#nilai akumulasi
+  #keterangan
+  #num = pilihan, 1 : bunga tunggal
+  #               2 : bunga majemuk biasa/nominal
+  #               3 : bunga majemuk kontinu
+  #k = modal
+  #i = bunga(desimal)
+  #t = waktu
+  #m = pemberian bunga berapa kali dalam 1 tahun
+nilaiakumulasimajemuk=function(num,k,i,t,m=TRUE)
+  switch(num,
+         satu = {
+           At= k*(1+i*t)
+           cat("Nilai akumulasi bunga tunggal:",At)
+         },
+         dua = {
+           At= k*(1+i/m)^(m*t)
+           cat("NIlai akumulasi bunga biasa/majemuk:",At)
+         },
+         tiga = {
+           At=k*exp(i*t)
+           cat("Nilai akumulasi bunga majemuk kontinu:",At)
+         }
+         )
