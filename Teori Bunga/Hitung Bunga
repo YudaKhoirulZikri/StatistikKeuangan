@@ -1,0 +1,23 @@
+#bunga
+#menghitung bunga
+#num = pilihan, 1 : bunga tunggal
+#               2 : bunga majemuk biasa/nominal
+#               3 : bunga majemuk kontinu
+#At = nilai akumulasi
+#t = Tahun
+#k = modal
+hitung_bunga=function(num, k, t, At,m=TRUE)
+  switch(num,
+         satu = {
+           bunga = (At/k-1)/t
+           cat("Nilai Bunga tunggal:",bunga)
+         },
+         dua = {
+           bunga = m*((At/k)^(1/(m*t))-1)
+           cat("Nilai Bunga Majemuk biasa/Nominal:",bunga)
+         },
+         tiga = {
+           bunga = log(At/k)/t
+           cat("Nilai bunga majemuk kontinu:",bunga)
+         }
+         )
