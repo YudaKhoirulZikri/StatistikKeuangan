@@ -1,0 +1,23 @@
+setwd("D:\\Kuliah Cuy!!!\\File Kuliah\\Semester 4\\Pengantar Statistika Keuangan\\Script")
+#Annuitas#
+#satu = annuitas akhir
+#dua = annuitas awal
+#k =
+#i =
+#n = 
+annuitas =function (num, k, i, n){
+  v=(1+i)^-1
+  switch(num,
+         satu = {
+           an = k*(1-v^n)/i
+           sn = k*((1+i)^n-1)/i
+           cat("Present Value untuk Annuitas Akhir: ", an , "\n")
+           cat("Nilai Akumulasi untuk annuitas Akhir: ", sn)
+         },
+         dua = {
+             an = k*(1-v^n)/(i*v)
+             sn = k*((1+i)^n-1)/(i*v)
+             cat("Present Value untuk Annuitas Awal: ", an ,"\n")
+             cat("Nilai Akumulasi untuk annuitas Awal: ", sn)
+         })
+}
