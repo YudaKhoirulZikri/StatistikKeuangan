@@ -1,0 +1,26 @@
+setwd("D:\\Kuliah Cuy!!!\\File Kuliah\\Semester 4\\Pengantar Statistika Keuangan\\Script")
+#Annuitas#
+#satu = annuitas akhir
+#dua = annuitas awal
+#k =
+#i =
+#n = 
+cicilan =function (num, tot, i, t, m = TRUE){
+#tot ; an/sn  
+  j = i/m
+  n = m*t
+  v = (1+j)^-1
+  switch(num,
+         satu = {
+           kan = tot*j/(1-v^n)
+           ksn = tot*j/((1+j)^n-1)
+           cat("Cicilan untuk Present Value Annuitas Akhir: ", kan , "\n")
+           cat("Cicilan untuk nilai Akumulasi untuk Annuitas Akhir: ", ksn)
+         },
+         dua = {
+           kan = tot*(j*v)/(1-v^n)
+           ksn = tot*(j*v)/((1+j)^n-1)
+           cat("Cicilan untuk Present Value Annuitas Awal: ", kan ,"\n")
+           cat("Cicilan untuk Nilai Akumulasi untuk annuitas Awal: ", ksn)
+         })
+}
